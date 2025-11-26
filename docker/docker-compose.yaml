@@ -1,0 +1,36 @@
+#
+
+services:
+  db:
+    image: postgres
+    container_name: local_pgdb
+    environment:
+      POSTGRES_USER: 
+      POSTGRES_PASSWORD:
+      POSTGRES_DB: ecommerce
+    volumes: 
+      - local_ecommerce_data:/var/lib/postgresql
+      - ./../bdd:/docker-entrypoint-initdb.d
+    ports:
+      - 5432:5432
+    networks: 
+      - db_ecommerce_network
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin_gui
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=${PGADMIN_DEFAULT_EMAIL}
+      - PGADMIN_DEFAULT_PASSWORD=${PGADMIN_DEFAULT_PASSWORD}
+    ports:
+      - 8080:80
+    volumes: 
+      - local_ecommerce_data:/var/lib/pgadmin
+    networks: 
+      - db_ecommerce_network
+    
+volumes:
+  local_ecommerce_data:
+
+networks:
+  db_ecommerce_network:
