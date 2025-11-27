@@ -28,6 +28,16 @@ services:
       - local_ecommerce_data:/var/lib/pgadmin
     networks: 
       - db_ecommerce_network
+
+  python_data:
+    container_name: python_data
+    build: 
+      context: ../.
+      dockerfile: script/Dockerfile
+    volumes: 
+      - local_ecommerce_data:/app
+    networks: 
+      - db_ecommerce_network
     
 volumes:
   local_ecommerce_data:
