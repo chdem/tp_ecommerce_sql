@@ -26,13 +26,16 @@ def create_report():
     print("5 Top5 clients")
     print(db_execute(top_customer))
 
-def file_printer(file_name): #not working
-    with open(file_name, "a", encoding="utf-8") as f:
-        old_stdout = sys.stdout       
-        sys.stdout = f               
-        try:
-            create_report()
-        finally:
-            sys.stdout = old_stdout
-
+def file_printer(file_name):
+    try:
+        with open(f"/app/output/{file_name}", "a", encoding="utf-8") as f:
+            old_stdout = sys.stdout       
+            sys.stdout = f               
+            try:
+                create_report()
+            finally:
+                sys.stdout = old_stdout
+                f.close()
+    except Exception as e:
+        print(e)
     

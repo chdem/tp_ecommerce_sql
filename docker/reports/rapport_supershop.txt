@@ -1,0 +1,183 @@
+2025-11-27 13:11:50
+
+1 Chiffre d’affaires total
+Le chiffre d’affaires total (hors commandes annulées) est de 382.44 €.
+
+2 panier moyen
+Le panier moyen est de 34.77 €.
+
+3 CA par catégories
+libelle: Jeux & Jouets
+total_amount: 120.83
+--------------------
+libelle: Beauté & Santé
+total_amount: 56.75
+--------------------
+libelle: Maison & Cuisine
+total_amount: 29.99
+--------------------
+libelle: Électronique
+total_amount: 129.89
+--------------------
+libelle: Sport & Loisirs
+total_amount: 44.98
+--------------------
+
+4 produit le plus vendu
+name: Puzzle 1000 pièces "Montagne"
+quantity: 5
+--------------------
+name: Gel douche FreshEnergy
+quantity: 3
+--------------------
+name: Puzzle 1000 pièces "Montagne"
+quantity: 2
+--------------------
+5 Top5 clients
+id_customer: 1
+first_name: Alice
+last_name: Martin
+total_amount: 170.92
+--------------------
+id_customer: 10
+first_name: Katia
+last_name: Garnier
+total_amount: 59.88
+--------------------
+id_customer: 3
+first_name: Chloé
+last_name: Bernard
+total_amount: 44.96
+--------------------
+id_customer: 5
+first_name: Emma
+last_name: Leroy
+total_amount: 31.80
+--------------------
+id_customer: 9
+first_name: Julien
+last_name: Fontaine
+total_amount: 29.90
+--------------------
+2025-11-27 13:12:28
+
+1 Chiffre d’affaires total
+Le chiffre d’affaires total (hors commandes annulées) est de 382.44 €.
+
+2 panier moyen
+Le panier moyen est de 34.77 €.
+
+3 CA par catégories
+libelle: Jeux & Jouets
+total_amount: 120.83
+--------------------
+libelle: Beauté & Santé
+total_amount: 56.75
+--------------------
+libelle: Maison & Cuisine
+total_amount: 29.99
+--------------------
+libelle: Électronique
+total_amount: 129.89
+--------------------
+libelle: Sport & Loisirs
+total_amount: 44.98
+--------------------
+
+4 produit le plus vendu
+name: Puzzle 1000 pièces "Montagne"
+quantity: 5
+--------------------
+name: Gel douche FreshEnergy
+quantity: 3
+--------------------
+name: Puzzle 1000 pièces "Montagne"
+quantity: 2
+--------------------
+5 Top5 clients
+id_customer: 1
+first_name: Alice
+last_name: Martin
+total_amount: 170.92
+--------------------
+id_customer: 10
+first_name: Katia
+last_name: Garnier
+total_amount: 59.88
+--------------------
+id_customer: 3
+first_name: Chloé
+last_name: Bernard
+total_amount: 44.96
+--------------------
+id_customer: 5
+first_name: Emma
+last_name: Leroy
+total_amount: 31.80
+--------------------
+id_customer: 9
+first_name: Julien
+last_name: Fontaine
+total_amount: 29.90
+--------------------
+2025-11-27 13:12:57
+
+1 Chiffre d’affaires total
+Le chiffre d’affaires total (hors commandes annulées) est de 382.44 €.
+
+2 panier moyen
+Le panier moyen est de 34.77 €.
+
+3 CA par catégories
+libelle: Jeux & Jouets
+total_amount: 120.83
+--------------------
+libelle: Beauté & Santé
+total_amount: 56.75
+--------------------
+libelle: Maison & Cuisine
+total_amount: 29.99
+--------------------
+libelle: Électronique
+total_amount: 129.89
+--------------------
+libelle: Sport & Loisirs
+total_amount: 44.98
+--------------------
+
+4 produit le plus vendu
+name: Puzzle 1000 pièces "Montagne"
+quantity: 5
+--------------------
+name: Gel douche FreshEnergy
+quantity: 3
+--------------------
+name: Puzzle 1000 pièces "Montagne"
+quantity: 2
+--------------------
+5 Top5 clients
+id_customer: 1
+first_name: Alice
+last_name: Martin
+total_amount: 170.92
+--------------------
+id_customer: 10
+first_name: Katia
+last_name: Garnier
+total_amount: 59.88
+--------------------
+id_customer: 3
+first_name: Chloé
+last_name: Bernard
+total_amount: 44.96
+--------------------
+id_customer: 5
+first_name: Emma
+last_name: Leroy
+total_amount: 31.80
+--------------------
+id_customer: 9
+first_name: Julien
+last_name: Fontaine
+total_amount: 29.90
+--------------------

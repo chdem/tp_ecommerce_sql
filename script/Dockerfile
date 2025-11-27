@@ -10,8 +10,10 @@ COPY docker/.env .env
 RUN ls -a
 RUN cat .env
 
+RUN mkdir -p /app/output
+
 RUN pip install psycopg[binary]
 RUN pip install dotenv
 
 
-CMD ["python", "main.py"]
+CMD ["python", "-u", "main.py"]

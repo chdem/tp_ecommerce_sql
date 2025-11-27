@@ -1,9 +1,8 @@
-
--- DROP TABLE IF EXISTS categories;
--- DROP TABLE IF EXISTS products;
--- DROP TABLE IF EXISTS customers;
--- DROP TABLE IF EXISTS orders;
--- DROP TABLE IF EXISTS order_items;
+DROP TABLE IF EXISTS order_items;
+DROP TABLE IF EXISTS products;
+DROP TABLE IF EXISTS orders;
+DROP TABLE IF EXISTS customers;
+DROP TABLE IF EXISTS categories;
 
 CREATE TABLE categories(
    id_categorie INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
@@ -16,7 +15,7 @@ CREATE TABLE products(
    id_products INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
    name VARCHAR(100) NOT NULL,
    price FLOAT NOT NULL CHECK("price" > 0),
-   available_stock SMALLINT NOT NULL CHECK("available_stock" > 0),
+   available_stock SMALLINT NOT NULL CHECK("available_stock" >= 0),
    id_categorie INT NOT NULL,
    FOREIGN KEY(id_categorie) REFERENCES categories(id_categorie)
 );

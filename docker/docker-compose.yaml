@@ -1,5 +1,3 @@
-#
-
 services:
   db:
     image: postgres
@@ -35,7 +33,7 @@ services:
       context: ../.
       dockerfile: script/Dockerfile
     volumes: 
-      - local_ecommerce_data:/app
+      - ./reports:/app/output
     networks: 
       - db_ecommerce_network
     
