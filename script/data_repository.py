@@ -7,7 +7,7 @@ load_dotenv()
 
 DSN = f"dbname=ecommerce user={os.getenv("POSTGRES_USER")} password={os.getenv("POSTGRES_PASSWORD")} host=local_pgdb port=5432"
 
-def __db_execute(function)-> psycopg.Cursor:
+def db_execute(function)-> psycopg.Cursor:
     try:
         with psycopg.connect(DSN) as conn:
             with conn.cursor() as cursor:
@@ -22,7 +22,7 @@ def __db_execute(function)-> psycopg.Cursor:
         print("other error", e)
 
 
-def __revenue_report(cursor):
+def revenue_report(cursor):
 
     cursor.execute(
     """
@@ -35,7 +35,7 @@ def __revenue_report(cursor):
     return result
 
 
-def __average_cart(cursor):
+def average_cart(cursor):
     cursor.execute(
     """
         SELECT ROUND(AVG(oi.quantity * oi.unit_price)::numeric, 2)  as avg_amount
@@ -46,7 +46,7 @@ def __average_cart(cursor):
     result = cursor.fetchone()[0]
     return result
 
-def __revenue_by_category(cursor):
+def revenue_by_category(cursor):
     cursor.execute("""
         SELECT ca.libelle, ROUND(SUM(oi.quantity * oi.unit_price)::numeric, 2) as total_amount
         FROM orders o
@@ -59,7 +59,7 @@ def __revenue_by_category(cursor):
     rows = cursor.fetchall()
     return __print_rows(rows, cursor.description)
 
-def __most_sold_product(cursor):
+def most_sold_product(cursor):
     cursor.execute("""
         SELECT p.name, oi.quantity
         FROM customers c
@@ -72,7 +72,7 @@ def __most_sold_product(cursor):
     rows = cursor.fetchall()
     return __print_rows(rows, cursor.description)
 
-def __top_customer(cursor):
+def top_customer(cursor):
     cursor.execute("""
             SELECT c.id_customer, c.first_name, c.last_name, ROUND(SUM(oi.quantity * oi.unit_price)::numeric, 2)  as total_amount
         FROM customers c
@@ -84,21 +84,6 @@ def __top_customer(cursor):
                 """)
     rows = cursor.fetchall()
     return __print_rows(rows, cursor.description)
-
-def create_report():
-    print("1 Chiffre d’affaires total")
-    print(f"Le chiffre d’affaires total (hors commandes annulées) est de {__db_execute(__revenue_report)} €.")
-    print()
-    print("2 panier moyen")
-    print(f"Le panier moyen est de {__db_execute(__average_cart)} €.")
-    print()
-    print("3 CA par catégories")
-    print(__db_execute(__revenue_by_category))
-    print()
-    print("4 produit le plus vendu")
-    print(__db_execute(__most_sold_product))
-    print("5 Top5 clients")
-    print(__db_execute(__top_customer))
 
 def __print_rows(rows, descriptions):
     columns = [c[0] for c in descriptions]
