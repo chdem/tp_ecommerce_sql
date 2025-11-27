@@ -1,7 +1,10 @@
-from data_repository import test
+import time
+from data_repository import create_report
 
-def main():
-    test()
+def report():
+    create_report()
 
-if __name__ =="__main__" :
-    main()
+if __name__ =="__main__":
+    print("En attente de la base de données...")
+    time.sleep(10)
+    report()
